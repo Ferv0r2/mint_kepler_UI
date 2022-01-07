@@ -2,7 +2,7 @@
 
 Setting_Webpack
 
-# Sequence
+## Setting Sequence
 
 npm init (-y)
 
@@ -105,4 +105,39 @@ npm install -D file-loader -> 이미지를 삽입하고 싶을 때
 
     webpack.config.js에서 module에 추가
     index.js에 import 후 적용
-    여기서 const img를 선언할 때, 따옴표가 아닌 `를 사용해야 함
+    여기서 const img를 선언할 때, 따옴표가 아닌 `를 사용해야 함 ( $포인터 때문 )
+
+기본적인 설정 완료
+
+---
+
+## Example
+
+index.js에 user 추가(회원 데이터) 후 User.js 생성
+
+    User.js는 회원의 이름(name)을 매개변수로 받음
+    이미지 import 후 이미지와 이름을 넣고 return
+
+List.js 생성
+
+    User를 import, userList를 매개변수로 받음
+    ul 리스트 생성
+    forEach를 통해 반복
+
+index.js에서 List 삽입 후 적용 확인
+
+---
+
+Style 추가
+
+    User.css 생성 후 스타일 삽입
+    User.js에서 import
+    user classList 추가
+    addEventListener로 알림창 추가
+
+이미지를 여러 종류 삽입하다 변경 시, 남은 잔여 파일 제거 플러그인
+
+    npm install -D clean-webpack-plugin
+    wenpack.config.js에서 plugin 부분 추가
+    타 플러그인과 달리 default export 설정이 되어있지 않아 {}를 씌워야 함
+    이후 build 시, dist에서 불필요한 이미지가 삭제된 것을 확인 가능
