@@ -1,0 +1,1 @@
+(()=>{"use strict";document.getElementById("root").innerHTML="<h1>안녕안녕!</h1>3"})();
